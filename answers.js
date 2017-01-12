@@ -2,26 +2,37 @@
 
 var allNumbers = [4, 6, -1, 7, -6];
 
-Array.prototype.printPositives = function(){
-    this.forEach(function(item) {
+function printPositives(item){
         if(item > 0) {
             console.log(item);
         }
     }
 
-)};
 
-allNumbers.printPositives();
+printPositives(allNumbers);
 
 
 //using the filter method to return only the positive numbers in an array
 
-var allNumbers2 = [9, -6, 10, 8, -4];
+var theNumbers2 = [9, -6, 10, 8, -4, 99, -87655, 5];
 
-allNumbers2.filter(function(number){
-    if(number > 0){
-        console.log(number);
-    }
-});
+function getPositives(x) {
+    return x >= 0;
+}
 
-allNumbers2;
+console.log(theNumbers2.filter(getPositives));
+
+
+//using the filter method to filter imput array
+
+var arr = [4, 6, -1, 7, -6, 400, -3424];
+
+arr.filter(getPositives).forEach(printPositives);
+
+//function filteredArray
+
+var filterArray = Array.prototype.filter;
+
+//the longest word
+
+
