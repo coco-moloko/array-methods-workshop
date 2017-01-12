@@ -14,3 +14,14 @@ Array.prototype.printPositives = function(){
 allNumbers.printPositives();
 
 
+//using the filter method to return only the positive numbers in an array
+
+var allNumbers2 = [9, -6, 10, 8, -4];
+
+allNumbers2.filter(function(number){
+    if(number > 0){
+        console.log(number);
+    }
+});
+
+allNumbers2;
