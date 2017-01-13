@@ -177,7 +177,7 @@ console.log(firstDividesSecond(100000, 20));
 
 //Find By ID
 
-[
+var totalArray = [
   {
     "id": "KeXoYg92is",
     "firstName": "John",
@@ -196,4 +196,16 @@ console.log(firstDividesSecond(100000, 20));
     "lastName": "Vader",
     "email": "vader@darkside.com"
   }
-]
+];
+
+var emptyObject = {};
+
+function convertArray() { 
+totalArray()
+    .forEach(function(arr) {
+      return emptyObject;  
+    });
+    
+}
+
+console.log(convertArray());
