@@ -33,6 +33,20 @@ arr.filter(getPositives).forEach(printPositives);
 
 var filterArray = Array.prototype.filter;
 
-//the longest word
+// the longest word
+function theWholeThing(str) {
+    var rayTheArray = str.split(" ");
+    var theWord = "";
+    var hi = rayTheArray.reduce(function(a, b) {
+        if (a.length < b.length) {
+        theWord = b;
+        }
+    return theWord;
+});
 
+return hi;
+}
+var rayTheString = "Hello I am the superhero of the day!";
+
+console.log(theWholeThing(rayTheString));
 
