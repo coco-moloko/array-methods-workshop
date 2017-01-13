@@ -111,3 +111,89 @@ function highLow(arr) {
 console.log(highLow(numbers));
 
 //wheel of fortune
+
+var str = "hello world how are you today";
+
+function countLetters(aString) {
+    var letters = {};
+    
+    aString
+        .split("")
+        .forEach(function(currentLetter) {
+            if (letters[currentLetter]) {
+                letters[currentLetter]  = letters[currentLetter] + 1;
+            }
+            else {
+                letters[currentLetter] = 1;
+            }
+
+        });
+    
+    return letters;
+}
+console.log(countLetters(str));
+
+//negate function
+
+function negate(fn) {
+      return function(x) {
+          return !fn(x);
+      };
+}
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+function isEmpty(someList) {
+  return someList.length === 0;
+}
+
+// New functions
+var isOdd = negate(isEven);
+var isNotEmpty = negate(isEmpty);
+
+console.log([1,2,3].filter(isEven));
+console.log([1,2,3].filter(isOdd));
+
+console.log(isEmpty([1,3,4]));
+
+//negate function expanded
+
+function negateTwo(fn) {
+      return function() {
+          return !fn(arguments);
+      };
+}
+
+function firstDividesSecond(first, second) {
+  return second % first === 0;
+}
+
+var firstDoesNotDivideSecond = negateTwo(firstDividesSecond);
+var firstDividesSecond = negateTwo(firstDoesNotDivideSecond);
+
+console.log(firstDoesNotDivideSecond(100, 2));
+console.log(firstDividesSecond(100000, 20));
+
+//Find By ID
+
+[
+  {
+    "id": "KeXoYg92is",
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john@smith.com"
+  },
+  {
+    "id": "NkALmSWtUp",
+    "firstName": "Donald",
+    "lastName": "Duck",
+    "email": "don@disney.com"
+  },
+  {
+    "id": "m7LPbJYSUg",
+    "firstName": "John",
+    "lastName": "Vader",
+    "email": "vader@darkside.com"
+  }
+]
